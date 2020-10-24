@@ -7,7 +7,7 @@ namespace XamlSampleData
 	class BindableSampleDatum : DynamicObject, IDynamicMetaObjectProvider
 	{
 		readonly SampleDataMotif motif;
-		IGetNextProperty Instance { get; set; }
+		ISampleDatum Instance { get; set; }
 
 		public BindableSampleDatum(SampleDataMotif motif)
 		{
@@ -63,7 +63,7 @@ namespace XamlSampleData
 		}
 	}
 
-	public interface IGetNextProperty
+	public interface ISampleDatum
 	{
 		object GetNextProperty();
 	}

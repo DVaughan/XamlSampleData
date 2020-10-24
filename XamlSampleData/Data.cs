@@ -2,7 +2,7 @@
 
 namespace XamlSampleData
 {
-	public class Person : IGetNextProperty
+	public class Person : ISampleDatum
 	{
 		public string FirstName { get; set; }
 		public string LastName { get; set; }
@@ -38,7 +38,7 @@ namespace XamlSampleData
 		}
 	}
 
-	public class City : IGetNextProperty
+	public class City : ISampleDatum
 	{
 		public string Name { get; set; }
 		public string Country { get; set; }

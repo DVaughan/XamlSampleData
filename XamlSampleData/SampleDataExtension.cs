@@ -14,13 +14,13 @@ namespace XamlSampleData
 	{
 		public SampleDataMotif Motif { get; set; } = SampleDataMotif.Cities;
 
-		public int ItemCount { get; set; } = 5;
+		public int Count { get; set; } = 5;
 
 		public override object ProvideValue(IServiceProvider serviceProvider)
 		{
 			var result = new ObservableCollection<object>();
 
-			for (int i = 0; i < ItemCount; i++)
+			for (int i = 0; i < Count; i++)
 			{
 				var datum = new BindableSampleDatum(Motif);
 				result.Add(datum);
