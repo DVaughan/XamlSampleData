@@ -89,7 +89,7 @@ namespace XamlSampleData
 
 		public static Person GetNextItem()
 		{
-			if (previousIndex > Items.Length)
+			if (previousIndex >= Items.Length)
 			{
 				previousIndex = 0;
 			}
@@ -113,7 +113,7 @@ namespace XamlSampleData
 
 		public static City GetNextItem()
 		{
-			if (previousIndex > Items.Length)
+			if (previousIndex >= Items.Length)
 			{
 				previousIndex = 0;
 			}

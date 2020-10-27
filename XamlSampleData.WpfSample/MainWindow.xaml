@@ -9,25 +9,15 @@
         Title="MainWindow" Height="450" Width="800" 
 		d:DataContext="{d:DesignInstance local:MainWindowViewModel}">
 	<Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-		</Grid.RowDefinitions>
-		<ListBox ItemsSource="{Binding Items1}" d:ItemsSource="{dd:SampleData Motif=People}" Grid.Row="1">
+		<ListBox ItemsSource="{Binding Items1}" d:ItemsSource="{dd:SampleData Motif=Cities,Count=7 }">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="{Binding Name}" />
-						<TextBlock Text="{Binding Country}" Margin="10,0,0,0" Foreground="Blue" />
-						<TextBlock Text="{Binding Alt}" d:Text="{Binding Altitude}"  Margin="10,0,0,0" Foreground="Red" />
-					</StackPanel>
-					<!--
-					<StackPanel Orientation="Horizontal">
-						<TextBlock Text="{Binding Name1}" />
-						<TextBlock Text="{Binding Country1}" Margin="10,0,0,0" Foreground="Blue" />
-						<TextBlock Text="{Binding Alt}" d:Text="{Binding Altitude}"  Margin="10,0,0,0" Foreground="Red" />
-					</StackPanel>-->
-				</DataTemplate>
+                        <TextBlock Text="{Binding Country}" Margin="10,0,0,0" Foreground="Blue" />
+                        <TextBlock Text="{Binding Alt}" d:Text="{Binding Altitude}" Margin="10,0,0,0" Foreground="Red" />
+                    </StackPanel>
+                </DataTemplate>
 			</ListBox.ItemTemplate>
 		</ListBox>
 	</Grid>
